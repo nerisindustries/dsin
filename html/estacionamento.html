@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F.O.G.O Estacionamento</title>
+
+    <link rel="stylesheet" href="../css/estcionamento.css">
+    <script src="../js/estacionamento.js" defer></script>
+</head>
+<body>
+
+    <header class="topo">
+        <div>
+            <h1>NerisMachines</h1>
+            <p>Sistema de estacionamento</p>
+        </div>
+
+        <a href="central.html" class="botao-voltar">Voltar à central</a>
+    </header>
+
+    <main class="container">
+
+        <section class="painel">
+            <h2>Consultar proprietário</h2>
+            <p>Digite o código de cadastro para consultar o veículo e os pontos.</p>
+
+            <form id="formPesquisa">
+                <input
+                    type="text"
+                    id="codigoPesquisa"
+                    placeholder="Ex.: 002"
+                    maxlength="3"
+                    required
+                >
+                <button type="submit">Pesquisar</button>
+            </form>
+
+            <p id="mensagem" class="mensagem" aria-live="polite"></p>
+        </section>
+
+        <section class="resultado">
+            <h2>Cadastro encontrado</h2>
+            <div id="cartaoVeiculo" class="cartao-vazio">
+                <p>Pesquise um código para exibir os dados do proprietário.</p>
+            </div>
+        </section>
+
+        <section class="painel painel-oficial">
+            <h2>Área do oficial</h2>
+            <p>Recargade pontos para um cadastro.</p>
+
+            <form id="formRecarga">
+                <input
+                    type="text"
+                    id="codigoRecarga"
+                    placeholder="Código do proprietário"
+                    maxlength="3"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="quantidadeRecarga"
+                    placeholder="Quantidade de pontos"
+                    min="1"
+                    step="1"
+                    required
+                >
+
+                <button type="submit">Adicionar pontos</button>
+            </form>
+
+            <p class="aviso">
+                Demonstração local: esta recarga não realiza pagamentos reais
+                nem valida a identidade de um oficial.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+    
+    </footer>
+
+</body>
+</html>
